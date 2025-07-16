@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Opiniones</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="formulario-opinion">
+        <h2>Deja tu opinión</h2>
+        <form method="POST">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="contenido">Tu opinión:</label><br>
+            <textarea id="contenido" name="contenido" rows="4" required></textarea><br><br>
+
+            <button type="submit">Enviar Opinión</button>
+        </form>
+    </div>
+
+    <div class="opiniones-guardadas">
+        <h3>Opiniones de visitantes</h3>
+        {% for nombre, contenido in opiniones %}
+            <div class="opinion">
+                <strong>{{ nombre }}</strong><br>
+                <p>{{ contenido }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
