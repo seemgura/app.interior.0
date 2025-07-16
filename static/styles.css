@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2F2F2;
+    color: #000000;
+}
+
+nav {
+    background: #B6B09F;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #000000;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero {
+    background: #EAE4D5;
+    color: #000000;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+iframe, img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.about {
+    padding: 2rem;
+    text-align: center;
+    background: #EAE4D5;
+}
+
+footer {
+    background: #B6B09F;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+}

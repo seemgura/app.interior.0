@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Estilos de Interiorismo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">Interiorismo</h1>
+            <ul class="nav-links">
+                <li><a href="#estilos">Estilos</a></li>
+                <li><a href="#opiniones">Opinión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Explora los estilos que definen tu espacio</h2>
+            <p>Una guía visual y elegante para descubrir tu estilo de diseño interior favorito.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="estilos" class="grid">
+            {% for estilo in estilos %}
+            <div class="card">
+                <h3>{{ estilo[1] }}</h3>
+                <p>{{ estilo[2] }}</p>
+                <iframe src="{{ estilo[3] }}" frameborder="0" allowfullscreen></iframe>
+                <img src="{{ estilo[4] }}" alt="Imagen de {{ estilo[1] }}">
+            </div>
+            {% endfor %}
+        </section>
+
+        <section id="opiniones" class="about">
+            <h2>Deja tu opinión</h2>
+            <form method="post" action="/opiniones">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="opinion">Tu opinión:</label>
+                <textarea id="opinion" name="opinion" rows="4" required></textarea>
+
+                <button type="submit">Enviar Opinión</button>
+            </form>
+
+            <h3>Opiniones recientes:</h3>
+            <ul>
+                {% for nombre, opinion in opiniones %}
+                <li><strong>{{ nombre }}</strong>: {{ opinion }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 · Desarrollado por Emmanuel Guerra</p>
+    </footer>
+</body>
+</html>
