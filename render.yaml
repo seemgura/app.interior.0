@@ -1,6 +1,7 @@
+
 services:
   - type: web
     name: interiorismo-app
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: ""
     startCommand: "python app.py"
