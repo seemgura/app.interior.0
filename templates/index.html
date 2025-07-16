@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,14 +39,20 @@
 
         <section id="opiniones" class="about">
             <h2>Deja tu opinión</h2>
-            <form method="post" action="/opiniones">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <form method="post" action="/opiniones" class="form-opinion">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
-                <label for="opinion">Tu opinión:</label>
-                <textarea id="opinion" name="opinion" rows="4" required></textarea>
+                <div class="form-group">
+                    <label for="opinion">Tu opinión:</label>
+                    <textarea id="opinion" name="opinion" rows="4" required></textarea>
+                </div>
 
-                <button type="submit">Enviar Opinión</button>
+                <div class="form-group">
+                    <button type="submit">Enviar Opinión</button>
+                </div>
             </form>
 
             <h3>Opiniones recientes:</h3>
