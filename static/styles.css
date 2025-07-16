@@ -1,27 +1,27 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ede9dd;
-    padding: 30px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
-
-.formulario-opinion, .opiniones-guardadas {
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
+}
+main {
+    padding: 2rem;
+}
+.opinion-form, .opiniones {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem auto;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    border-radius: 8px;
 }
-
-input[type="text"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+.opinion {
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
 }
